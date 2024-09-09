@@ -1,0 +1,151 @@
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    font-size: 14px;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color:  hsl(30, 38%, 92%);
+}
+
+.container {
+    display: grid;
+    grid-template-rows: repeat(2, 100%);
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    width: 45%;
+    margin: 0;   
+}
+
+.item-1 {
+    background-color: blue;
+    position: relative;
+}
+
+.mobile-image {
+    display: none; /* Hide mobile-image by default */
+}
+
+.desktop-image {
+    display: block; /* Show desktop-image by default */
+}
+
+.item-2 {
+    background-color: hsl(0, 0%, 100%);
+    padding: 10px 30px;
+    font-size: 14px;
+}
+
+.item-2 h4 {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    color:  hsl(228, 12%, 48%);
+}
+
+.item-2 h2 {
+    font-family: 'Fraunces';
+    font-size: 2.7em;
+    font-weight: 700;
+    line-height: 1.0em;
+}
+
+.item-2 p {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 1.2em;
+    margin: 0;
+    color: hsl(228, 12%, 48%);
+}
+
+.item-2 .new-price {
+    margin: 20px auto;
+    font-size: 3.1em;
+    font-weight: bold;
+    color: hsl(158, 36%, 37%);
+    font-family: 'Fraunces';
+}
+
+.item-2 .old-price {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 18px;
+    color: hsl(228, 12%, 48%);
+    text-decoration: line-through;
+}
+
+button {
+    width: 100%;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(158, 36%, 37%);
+    padding: 20px;
+    margin: 20px auto;
+    border: 0;
+    border-radius: 10px;
+    font-size: 1.2em;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    cursor: pointer;
+}
+
+button img {
+    padding-right: 10px;
+}
+
+button:hover {
+    background-color: hsl(159, 68%, 7%);
+}
+
+@media (max-width: 550px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 40% 60%;
+        width: 90vw;
+        height: 100vh;
+        margin-top: 30px;
+    }
+
+    .mobile-image {
+        display: block; /* Show the mobile-image */
+      }
+  
+    .desktop-image {
+        display: none; /* Hides the desktop-image */
+    }
+
+    .item-2 h2 {
+        font-size: 2.0em;
+        margin: 0;
+    }
+
+    .item-2 h4 {
+        font-size: 0.9em;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .item-2 p {
+        font-size: 1.0em;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .item-2 .new-price {
+        font-size: 2.0em;
+    }
+
+    .item-2 .old-price {
+        font-size: 0.6em;
+        padding-left: 20px;
+    }
+
+    button {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 1.0em;
+        width: 100%;
+        margin: 0;
+    }
+}
